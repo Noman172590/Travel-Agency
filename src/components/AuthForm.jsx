@@ -123,17 +123,16 @@ export default function AuthForm({ mode = "login" }) {
             ? "Start planning your next adventure."
             : "Login to continue your journey."}
         </p>
-
         <button
           type="button"
           onClick={handleGoogleLogin}
           disabled={loading}
-          className="mt-7 flex w-full items-center justify-center gap-3 rounded-xl border border-slate-300 py-3 font-semibold hover:bg-slate-50 disabled:opacity-60"
+          className="mt-7 cursor-pointer flex w-full items-center justify-center gap-3 rounded-xl border border-slate-300 py-3 font-semibold hover:bg-slate-50 disabled:opacity-60"
         >
           {loading ? (
             <LoaderCircle size={20} className="animate-spin" />
           ) : (
-            <span className="font-bold text-blue-600">G</span>
+            <span className="font-bold text-blue-600 ">G</span>
           )}
           Continue with Google
         </button>
@@ -192,7 +191,7 @@ export default function AuthForm({ mode = "login" }) {
           <button
             type="submit"
             disabled={loading}
-            className="flex w-full items-center justify-center gap-2 rounded-xl bg-teal-600 py-3.5 font-bold text-white hover:bg-teal-700 disabled:opacity-60"
+            className="flex cursor-pointer w-full items-center justify-center gap-2 rounded-xl bg-teal-600 py-3.5 font-bold text-white hover:bg-teal-700 disabled:opacity-60"
           >
             {loading && <LoaderCircle size={19} className="animate-spin" />}
             {loading

@@ -10,6 +10,8 @@ import Register from "./pages/Register";
 import News from "./pages/News";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
+import BlogDetails from "./pages/BlogDetails";
+import NewsDetails from "./pages/NewsDetails";
 
 function SimplePage({ title, description }) {
   return (
@@ -50,6 +52,8 @@ export default function App() {
           <Route path="/news" element={<News />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/blog/:id" element={<BlogDetails />} />
+          <Route path="/news/:id" element={<NewsDetails />} />
           <Route
             path="/news"
             element={
