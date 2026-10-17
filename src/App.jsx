@@ -7,14 +7,15 @@ import SearchPage from "./pages/Search";
 import Booking from "./pages/Booking";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import News from "./pages/News";
+import Blog from "./pages/Blog";
+import Contact from "./pages/Contact";
 
 function SimplePage({ title, description }) {
   return (
     <main className="mx-auto min-h-[60vh] max-w-7xl px-5 py-16">
       <h1 className="text-4xl font-extrabold">{title}</h1>
-      <p className="mt-4 max-w-2xl leading-7 text-slate-500">
-        {description}
-      </p>
+      <p className="mt-4 max-w-2xl leading-7 text-slate-500">{description}</p>
       <Link
         to="/"
         className="mt-6 inline-block rounded-xl bg-teal-600 px-5 py-3 font-semibold text-white"
@@ -42,13 +43,13 @@ export default function App() {
       <div className="flex-1">
         <Routes>
           <Route path="/" element={<Home />} />
-
           <Route path="/search" element={<SearchPage />} />
           <Route path="/booking" element={<Booking />} />
-
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-
+          <Route path="/news" element={<News />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/contact" element={<Contact />} />
           <Route
             path="/news"
             element={
